@@ -156,10 +156,10 @@ export const originSources = {
         interval: Time.Fast,
         type: "realtime",
       },
-      depth: {
-        title: "深度头条",
-        interval: Time.Common,
-      },
+      // depth: {
+      //   title: "深度头条",
+      //   interval: Time.Common,
+      // },
     },
   },
   "xueqiu": {
@@ -273,19 +273,28 @@ function genSources() {
     if (source.sub && Object.keys(source.sub).length) {
       Object.entries(source.sub).forEach(([subId, subSource], i) => {
         if (i === 0) {
-          _.push([id, {
-            redirect: `${id}-${subId}`,
-            ...parent,
-            ...subSource,
-          }] as [any, Source])
+          _.push([
+            id,
+            {
+              redirect: `${id}-${subId}`,
+              ...parent,
+              ...subSource,
+            },
+          ] as [any, Source])
         }
-        _.push([`${id}-${subId}`, { ...parent, ...subSource }] as [any, Source])
+        _.push([`${id}-${subId}`, { ...parent, ...subSource }] as [
+          any,
+          Source,
+        ])
       })
     } else {
-      _.push([id, {
-        title: source.title,
-        ...parent,
-      }])
+      _.push([
+        id,
+        {
+          title: source.title,
+          ...parent,
+        },
+      ])
     }
   })
 
