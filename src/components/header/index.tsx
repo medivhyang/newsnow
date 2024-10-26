@@ -51,7 +51,13 @@ function Refresh() {
 function ThemeToggle() {
   const { isDark, toggleDark } = useDark()
   return (
-    <span onClick={toggleDark} className={clsx("inline-block", isDark ? "i-ph-moon-stars-duotone" : "i-ph-sun-dim-duotone")} />
+    <button type="button" title="Theme" onClick={toggleDark} className={clsx("inline-block", isDark ? "i-ph-moon-stars-duotone" : "i-ph-sun-dim-duotone")} />
+  )
+}
+
+function GoHome() {
+  return (
+    <a type="button" title="Go Home" className="i-ph:house-line btn" href="https://medivhy.com/zh/" />
   )
 }
 
@@ -82,6 +88,7 @@ export function Header() {
         <GoTop />
         <Refresh />
         <ThemeToggle />
+        <GoHome />
       </span>
     </>
   )
