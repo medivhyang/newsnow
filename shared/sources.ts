@@ -12,17 +12,17 @@ const Time = {
 }
 
 export const originSources = {
-  "v2ex": {
-    name: "V2EX",
-    color: "slate",
-    home: "https://v2ex.com/",
-    sub: {
-      share: {
-        title: "最新分享",
-        column: "tech",
-      },
-    },
-  },
+  // "v2ex": {
+  //   name: "V2EX",
+  //   color: "slate",
+  //   home: "https://v2ex.com/",
+  //   sub: {
+  //     share: {
+  //       title: "最新分享",
+  //       column: "tech",
+  //     },
+  //   },
+  // },
   "zhihu": {
     name: "知乎",
     type: "hottest",
@@ -39,14 +39,14 @@ export const originSources = {
     interval: Time.Realtime,
     home: "https://weibo.com",
   },
-  "zaobao": {
-    name: "联合早报",
-    interval: Time.Common,
-    type: "realtime",
-    column: "world",
-    color: "red",
-    home: "https://www.zaobao.com",
-  },
+  // "zaobao": {
+  //   name: "联合早报",
+  //   interval: Time.Common,
+  //   type: "realtime",
+  //   column: "world",
+  //   color: "red",
+  //   home: "https://www.zaobao.com",
+  // },
   "coolapk": {
     name: "酷安",
     type: "hottest",
@@ -208,20 +208,20 @@ export const originSources = {
     home: "https://solidot.org",
     interval: Time.Slow,
   },
-  "hackernews": {
-    name: "Hacker News",
-    color: "orange",
-    column: "tech",
-    type: "hottest",
-    home: "https://news.ycombinator.com/",
-  },
-  "producthunt": {
-    name: "Product Hunt",
-    color: "red",
-    column: "tech",
-    type: "hottest",
-    home: "https://www.producthunt.com/",
-  },
+  // "hackernews": {
+  //   name: "Hacker News",
+  //   color: "orange",
+  //   column: "tech",
+  //   type: "hottest",
+  //   home: "https://news.ycombinator.com/",
+  // },
+  // "producthunt": {
+  //   name: "Product Hunt",
+  //   color: "red",
+  //   column: "tech",
+  //   type: "hottest",
+  //   home: "https://www.producthunt.com/",
+  // },
   "github": {
     name: "Github",
     color: "gray",

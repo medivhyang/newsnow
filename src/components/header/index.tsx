@@ -6,8 +6,8 @@ import clsx from "clsx"
 import type { SourceID } from "@shared/types"
 import { Homepage, Version } from "@shared/consts"
 import { NavBar } from "../navbar"
-import { Menu } from "./menu"
 import { currentSourcesAtom, goToTopAtom, refetchSourcesAtom } from "~/atoms"
+import { useDark } from "~/hooks/useDark"
 
 function GoTop() {
   const { ok, fn: goToTop } = useAtomValue(goToTopAtom)
@@ -48,6 +48,13 @@ function Refresh() {
   )
 }
 
+function ThemeToggle() {
+  const { isDark, toggleDark } = useDark()
+  return (
+    <span onClick={toggleDark} className={clsx("inline-block", isDark ? "i-ph-moon-stars-duotone" : "i-ph-sun-dim-duotone")} />
+  )
+}
+
 export function Header() {
   return (
     <>
@@ -74,7 +81,7 @@ export function Header() {
       <span className="justify-self-end flex gap-2 items-center text-xl text-primary-600 dark:text-primary">
         <GoTop />
         <Refresh />
-        <Menu />
+        <ThemeToggle />
       </span>
     </>
   )
