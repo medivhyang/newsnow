@@ -57,7 +57,7 @@ function ThemeToggle() {
 
 function GoHome() {
   return (
-    <a type="button" title="Go Home" className="i-ph:house-line btn" href="https://medivhy.com/zh/" />
+    <a type="button" title="Go Home" className="i-ph:house-duotone btn" href="https://medivhy.com/zh/" />
   )
 }
 
